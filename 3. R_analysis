@@ -1,0 +1,73 @@
+# Load the ggplot2 package
+library(ggplot2)
+library(scales)
+
+#here we preload the polls data
+cal_data <- read.csv("https://raw.githubusercontent.com/MaggeCode/HSG/main/calory_Data2.csv")
+
+# check structure of the data frame
+str(cal_data)
+cal_data
+
+summary(cal_data$Age)
+
+hist(cal_data$Age)
+
+hist(cal_data$Cheese.Burger)
+
+
+hist(cal_data$Total.Calories, breaks=20)
+
+
+m = nrow(subset(cal_data, Gender=="male"))     # 'subset' returns a data.frame
+f = nrow(subset(cal_data, Gender=="female"))     # 'subset' returns a data.frame
+m
+f
+gender <-c(m,f) 
+#pie(gender, main="Piechart", radius=1, labels = c("male","female"))
+
+piepercent<- round(100*gender/sum(gender), 1)
+
+pie(gender, main="Distribution of male and female", radius=1, labels = piepercent, col=rainbow(length(gender)))
+legend("topright", c("male","female"), cex = 0.8, fill = rainbow(length(gender)))
+
+
+
+#ideas for charts
+# order history and trends
+
+
+#per age how much percent of daily calorie input do they consume in one order
+
+#products sum  for bubble plot
+Ham<- sum(cal_data$Hamburger)
+Che<- sum(cal_data$Cheese.Burger)
+Big<- sum(cal_data$Big.Mac)
+McC<- sum(cal_data$McChicken)
+Fre<- sum(cal_data$French.Fries)
+Sal<- sum(cal_data$Salad)
+Coc<- sum(cal_data$Coca.Cola)
+Spr<- sum(cal_data$Sprite)
+
+products <-c(Ham,Che,Big,McC,Fre,Sal,Coc,Spr)
+pie(products, main="Amount consumed per product", radius=1, labels = products, col=rainbow(length(products)))
+legend("topright", c("Hamburger","Cheese burger","Big Mac","McChicken","French Fries","Salad","Coca Cola","Sprite"), cex = 0.8, fill = rainbow(length(products)))
+
+
+#Dishes calories
+Hamburger <- 250
+Cheese_Burger <- 300
+Big_Mac  <- 540
+McChicken  <- 350
+French_Fries  <- 230
+Salad <- 15
+Coca_Cola <- 150
+Sprite <- 150
+
+#Combinations of dishes
+
+Happy_Meal  <- (Chee) ["Cheese Burger", "French Fries", "Coca Cola"]
+"Best Of Big Mac" => ["Big Mac", "French Fries", "Coca Cola"],
+"Best Of Royal Cheese" => ["McChicken", "Salad", "Sprite"]
+
+
