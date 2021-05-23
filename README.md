@@ -1,14 +1,9 @@
 # Calorie_Counter
 
-The R code produces a simple dashboard of the data entered into the calorie counter application.
+The project Calorie_Counter is an application consisting of three different coding languages and three different parts of code.
 
-The following packages need to be installed to run the code:
-  install.packages(ggplot2)
-  install.packages(scales)
-  install.packages(dplyr)
-  install.packages(gridExtra)
-
-A sample data set can be used to get a better overview. Replace the URL of the preloaded CSV to "https://raw.githubusercontent.com/MaggeCode/HSG/main/calory_Data4.csv"
-
-Open plot in zoom mode for proper displaying of the results
+The application need to be run according to the following steps:
+1. Run ruby code (see folder "")
+2. Run HTML code (see folder "")
+3. Rund R code (see folder "R_Code")
 
