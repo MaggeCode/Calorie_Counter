@@ -74,7 +74,7 @@ str(cal_data)
       geom_text(aes(y = ypos, label = value), color = "black", size=4) +
       scale_fill_brewer(palette="Set2")+
       #add title
-      labs(title="Quantity of each products chosen")
+      labs(title="Quantity of each product chosen")
 
 
 # Graph 3: Create a chart showing the calories inputs per age
