@@ -1,6 +1,6 @@
 # Calorie_Counter
 
-The R code produces a simple dashboard of the data entered into the calorie counter application. Currently, a sample data set is used to get an impression of the different analyses.   
+The R code produces a simple dashboard for the data entered into the calorie counter application. Currently, a sample data set with 58 inputs (each representing one order/calculation) is used to showcase the different analyses.   
 
 The following packages need to be installed to run the code:
   - install.packages(ggplot2)
